@@ -1,2 +1,2 @@
-# spooltv.github.io
- marketing landing page
+# amSite
+ Landing Page for Automedia
