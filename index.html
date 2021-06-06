@@ -14,32 +14,36 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body class="" style="font-family:'Montserrat';">
 	<div id="main" class="text-black">
 		<div id="section1 hero" class="bg-cover" style="background-image: url('https://source.unsplash.com/weekly?snow')" > 
 			<!-- <div id="hero-bg" class="bg-opacity-50 bg-gradient-to-t from-white via-blue-50 to-blue-300" > -->
-			<div id="hero-bg" class="bg-blue-50 bg-opacity-80" >
+			<div id="hero-bg" class="bg-blue-100 bg-opacity-80" >
 				<div id="hero-content" class="container p-8 m-auto flex flex-col items-end text-black text-right ">
-					<div id="nav" class="mt-12 text-4xl font-semibold " style="text-shadow:3px 3px #FFFFFF;">
+					<div id="nav" class="md:text-5xl text-4xl font-semibold " style="text-shadow:3px 3px #FFFFFF;">
 						<p class="">spool</p>
 						<p class="-mt-2">.tv</p>
 					</div>
-					<div id="main-content" class="mt-24  flex flex-col items-end pt-24">
-						<div id="hero-headline" class="max-w-xl text-6xl font-thin leading-none" style="font-family:'Roboto';">
-							<p class="">news feeds of things that matter</p>
+					<div id="main-content" class="md:mt-24 mt-10 md:py-20 py-10 flex flex-col items-end">
+						<div id="hero-headline" class="max-w-xl md:text-6xl text-4xl  font-thin leading-none" style="font-family:'Roboto';">
+							<p class="">video feeds of things that matter</p>
 						</div>
-						<div id="hero-body" class="max-w-lg mt-12 text-base">
+						<div id="hero-body" class="max-w-lg mt-4 text-base" >
 							<p class="">spool.tv compiles data and information of current events and news curated from respectable sources. presented in TV or Vertical Mobile video on Youtube.</p>
 							<!--<p class="mt-6">This service is free of charge.</p> -->
 						</div>
-						<div id="hero-cta" class="mt-12 mb-36 text-white">
-							<a href="https://www.youtube.com/channel/UCvgrUqNhTaeVHhw-cmAS0gQ?sub_confirmation=1">
+						<div id="hero-cta" class="my-8 text-white flex flex-col items-center">
+							<a href="https://www.youtube.com/channel/UCvgrUqNhTaeVHhw-cmAS0gQ">
 								<div id="button" class="bg-red-500 py-2 px-4 rounded-md shadow-lg flex items-center">
 									<span class="material-icons material-icons-outlined">smart_display</span>
-									<p class="text-base ml-1">Subscribe Now</p>
+									<p class="text-base ml-1">Watch Now</p>
+								</div>
+							<a href="https://www.youtube.com/channel/UCvgrUqNhTaeVHhw-cmAS0gQ?sub_confirmation=1">
+								<div id="secondary-button" class="m-3 rounded-md ">
+									<p class="text-sm ml-1 text-red-500">Subscribe</p>
 								</div>
 							</a>
 						</div>
@@ -50,30 +54,61 @@
 		<div id="section2 media1" class="bg-cover" style="background-image: url('https://source.unsplash.com/weekly?covid')" > 
 			<!-- <div id="hero-bg" class="bg-opacity-50 bg-gradient-to-t from-white via-blue-50 to-blue-300" > -->
 			<div id="hero-bg" class="bg-indigo-900 bg-opacity-90" >
-				<div id="hero-content" class="container p-8 m-auto flex flex-col items-start text-white text-left ">
-					<div id="nav" class="my-16 text-4xl font-light " style="text-shadow:1px 1px #000000;">
-						<p class="">spools</p>
-					</div>
-					<div id="main-content" class="mt-12 flex flex-col items-start">
+				<div id="hero-content" class="container p-8 py-16 m-auto flex flex-col items-start text-white text-left ">
+					<div id="main-content" class="flex flex-col items-start w-full">
 						<div id="nav" class="text-4xl font-semibold " style="text-shadow:4px 4px #4978F1;">
 							<p class="">CovidFeed</p>
 						</div>
-						<div id="hero-headline" class="mt-4 max-w-xl text-base " style="font-family:'Roboto';">
-							<p class="">video feeds of the latest information on the corona virus pandemic in the United states. We pull the latest statistics, news and other relevant information from reputable sources. Available on Youtube for TV & Mobile (vertical) formats covering many countries & regions. 🇺🇸🇧🇷🇫🇷🇮🇳🇷🇺</p>
+						<div id="tags" class="flex my-4 text-xs font-mono text-black flex-wrap">
+							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">#Video</div>
+							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">#Daily</div>
+							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">#TV</div>
+							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">#Vertical</div>
+							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">#Shorts</div>
+							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">🇺🇸🇧🇷🇫🇷🇮🇳🇷🇺</div>
 						</div>
-						<div id="hero-body" class="mt-12 mb-24 grid md:grid-cols-1 md:grid-rows-1 lg:grid-cols-4 gap-4" style="height:450px;">
-							<div class="bg-cover border-8 mr-2 rounded-lg shadow-xl md:col-span-1 lg:col-span-3">
-								 <iframe width=100% height=100%
-									src="https://www.youtube.com/embed/rP0XO51QfXo?autoplay=1&mute=1">
-									</iframe> 
+						<div id="hero-headline" class="mb-4 max-w-xl text-base ">
+							<p class="">daily video feeds of the latest information on the corona virus pandemic in the United states. we pull the latest statistics, news and other relevant information from reputable sources. available on Youtube for TV & Mobile (vertical) formats covering many countries & regions.</p>
+						</div>
+
+<!-- 						<div id="hero-body" class="mt-8 mb-24 grid lg:grid-cols-4 md:grid-cols-1 gap-4 w-full">
+							<div class="bg-cover border-8 mr-2 rounded-lg shadow-xl lg:col-span-3 " style="height:450px; max-width: 700px;"> -->
+
+						<div id="hero-body" class="my-4 w-full flex md:flex-row flex-col">
+							<div id="tv-video" class="bg-cover mr-4 md:w-3/4 w-full h-auto flex flex-col" style="max-width: 700px;">
+<!-- 								 <iframe width=100% height=100% src="https://www.youtube.com/embed/rP0XO51QfXo?autoplay=1&mute=1"> </iframe>  -->
+									<div class="border-8 rounded-lg shadow-xl h-96"><iframe width=100% height=100% src="https://www.youtube.com/embed/rP0XO51QfXo?autoplay=1&mute=1&controls=0&&showinfo=0&loop=1​"></iframe></div>
+									<p class="my-2 text-sm text-gray-400">TV Video format</p>
 							</div>
-							<div class="bg-cover border-8 rounded-lg shadow-xl md:col-span-1 lg:col-span-1">
-								<iframe width=100% height=100%
-									src="https://www.youtube.com/embed/GY5n6RI8Pv0?autoplay=1&mute=1">
-									</iframe> 
+							<div id="mobile-video" class="bg-cover md:w-1/4 w-full flex flex-col"style="max-width: 250px;" >
+								<div class="border-8 rounded-lg shadow-xl h-96"><iframe width=100% height=100% src="https://www.youtube.com/embed/GY5n6RI8Pv0?autoplay=1&mute=1&controls=0&&showinfo=0&loop=1​"></iframe></div>
+								<p class="my-2 text-sm text-gray-400">Mobile Vertical Video</p>
 							</div>
 						</div>
+
 					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section-last footer" class="bg-cover" > 
+			<!-- <div id="hero-bg" class="bg-opacity-50 bg-gradient-to-t from-white via-blue-50 to-blue-300" > -->
+			<div id="footer-bg" class="bg-blue-100 bg-opacity-80 p-20" >
+				<div id="footer-content" class="container m-auto flex flex-col items-center text-black text-center ">
+					<div id="main-footer-content" class="flex flex-col items-center">
+						<div id="footer-headline" class="max-w-xl text-5xl font-thin leading-none" style="font-family:'Roboto';">
+							<a href="https://twitter.com/spool__tv"><i class="fab fa-twitter mr-2"></i></a>
+							<a href="https://www.instagram.com/spool_TV/"><i class="fab fa-instagram mr-2"></i></a>
+							<a href="https://t.me/spooltv"><i class="fab fa-telegram mr-2"></i></a>
+							<a href="mailto:feedback@automedia.ai"><i class="fas fa-envelope mr-2"></i></a>
+						</div>
+						<div id="footer-body" class="max-w-lg mt-4 text-base " >
+							<span class="">follow us for useful video feeds that keep you informed & happy. We are getting started, lots of new content on the way! For any business queries, reach out to </span> <span class="font-bold"><a href="mailto:contact@spool.tv">contact@spool.tv</a></span>
+							<!--<p class="mt-6">This service is free of charge.</p> -->
+						</div>
+						<div id="footer-end" class="max-w-lg mt-20 text-sm text-gray-400 font-light" >
+							<span class="">spool.tv is a brand of </span><span class="font-medium"><a href="http://www.automedia.ai/">automedia</a></span><span class="">, the AI printing press</span>
+							<!--<p class="mt-6">This service is free of charge.</p> -->
+						</div>
 				</div>
 			</div>
 		</div>
