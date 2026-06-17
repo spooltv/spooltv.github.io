@@ -151,6 +151,13 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .pitch .format-line { color: var(--muted); font-size: 1.04rem; line-height: 1.6; margin-top: 22px; max-width: 52ch; }
 .pitch .format-line b { color: var(--white); font-family: var(--ff-display); letter-spacing: .02em; }
 .pitch .format-line .y { color: var(--yellow); }
+/* compact "where to watch" folded into the pitch section */
+.watch-inline { margin-top: 30px; }
+.watch-inline .wl { display: block; font-family: var(--ff-display); color: var(--cyan); letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; margin-bottom: 12px; }
+.platforms-sm { display: flex; flex-wrap: wrap; gap: 8px; }
+.plat-sm { display: inline-flex; align-items: center; gap: .45em; font-family: var(--ff-display); font-size: .82rem; letter-spacing: .03em; text-transform: uppercase; color: var(--white); border: 1.5px solid var(--char-3); border-radius: 9px; padding: .5em .8em; transition: border-color .2s, color .2s, transform .2s var(--ease); }
+.plat-sm svg { width: 1.05em; height: 1.05em; }
+.plat-sm:hover { border-color: var(--yellow); color: var(--yellow); transform: translateY(-2px); }
 
 /* ---- THE SHOW (format + phone mock) --------------------- */
 .show { background: linear-gradient(180deg, var(--char) 0%, var(--char-2) 100%); }
