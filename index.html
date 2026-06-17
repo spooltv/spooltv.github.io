@@ -1,117 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <title>spoolTV, news feeds of things that matter</title>
-  <link rel = "icon" href = "favicon.png" type = "image/x-icon"> 
-  <meta charset="utf-8">
-  <meta name="Description" CONTENT="spoolTV, video feeds of things that matter. Catch us on Youtube.">
-  <meta property="og:site_name" content="automedia" />
-  <meta property="og:description" content="spoolTV, video feeds of things that matter. Catch us on Youtube." />
-  <meta property="og:image" content="OGImage.png"/>
-<!--   <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" /> -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>spool.tv — video feeds of things that matter</title>
+  <meta name="description" content="spool.tv turns the day's news into short, watchable video — curated from real sources, built for your feed and your TV. Home of James Newshound." />
+  <link rel="icon" href="assets/favicon-spool.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#F4F7FC" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="spool.tv" />
+  <meta property="og:title" content="spool.tv — video feeds of things that matter" />
+  <meta property="og:description" content="The day's news, turned into short watchable video. Home of James Newshound." />
+  <meta property="og:image" content="assets/brooklyn.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- No-FOUC theme: set data-theme before first paint. Light is the default. -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('theme');
+        var t = s ? s : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/spool.css" />
 </head>
-<body class="" style="font-family:'Montserrat';">
-	<div id="main" class="text-black">
-		<div id="section1 hero" class="bg-cover" style="background-image: url('https://source.unsplash.com/weekly?snow')" > 
-			<!-- <div id="hero-bg" class="bg-opacity-50 bg-gradient-to-t from-white via-blue-50 to-blue-300" > -->
-			<div id="hero-bg" class="bg-blue-100 bg-opacity-80" >
-				<div id="hero-content" class="container p-8 m-auto flex flex-col items-end text-black text-right ">
-					<div id="nav" class="md:text-5xl text-4xl font-semibold " style="text-shadow:3px 3px #FFFFFF;">
-						<p class="">spool</p>
-						<p class="-mt-2">.tv</p>
-					</div>
-					<div id="main-content" class="md:mt-24 mt-10 md:py-20 py-10 flex flex-col items-end">
-						<div id="hero-headline" class="max-w-xl md:text-6xl text-4xl  font-thin leading-none" style="font-family:'Roboto';">
-							<p class="">video feeds of things that matter</p>
-						</div>
-						<div id="hero-body" class="max-w-lg mt-4 text-base" >
-							<p class="">spool.tv compiles data and information of current events and news curated from respectable sources. presented in TV or Vertical Mobile video on Youtube.</p>
-							<!--<p class="mt-6">This service is free of charge.</p> -->
-						</div>
-						<div id="hero-cta" class="my-8 text-white flex flex-col items-center">
-							<a href="https://www.youtube.com/channel/UCvgrUqNhTaeVHhw-cmAS0gQ">
-								<div id="button" class="bg-red-500 py-2 px-4 rounded-md shadow-lg flex items-center">
-									<span class="material-icons material-icons-outlined">smart_display</span>
-									<p class="text-base ml-1">Watch Now</p>
-								</div>
-							<a href="https://www.youtube.com/channel/UCvgrUqNhTaeVHhw-cmAS0gQ?sub_confirmation=1">
-								<div id="secondary-button" class="m-3 rounded-md ">
-									<p class="text-sm ml-1 text-red-500">Subscribe</p>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="section2 media1" class="bg-cover" style="background-image: url('https://source.unsplash.com/weekly?covid')" > 
-			<!-- <div id="hero-bg" class="bg-opacity-50 bg-gradient-to-t from-white via-blue-50 to-blue-300" > -->
-			<div id="hero-bg" class="bg-indigo-900 bg-opacity-90" >
-				<div id="hero-content" class="container p-8 py-16 m-auto flex flex-col items-start text-white text-left ">
-					<div id="main-content" class="flex flex-col items-start w-full">
-						<div id="nav" class="text-4xl font-semibold " style="text-shadow:4px 4px #4978F1;">
-							<p class="">CovidFeed</p>
-						</div>
-						<div id="tags" class="flex my-4 text-xs font-mono text-black flex-wrap">
-							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">#Video</div>
-							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">#Daily</div>
-							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">#TV</div>
-							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">#Vertical</div>
-							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">#Shorts</div>
-							<div id="tag" class="bg-yellow-300 px-1 mr-1 mb-1 rounded-sm shadow-xl">🇺🇸🇧🇷🇫🇷🇮🇳🇷🇺</div>
-						</div>
-						<div id="hero-headline" class="mb-4 max-w-xl text-base ">
-							<p class="">daily video feeds of the latest information on the corona virus pandemic in the United states. we pull the latest statistics, news and other relevant information from reputable sources. available on Youtube for TV & Mobile (vertical) formats covering many countries & regions.</p>
-						</div>
+<body>
+  <a href="#shows" class="btn btn-primary skip-link">Skip to shows</a>
 
-<!-- 						<div id="hero-body" class="mt-8 mb-24 grid lg:grid-cols-4 md:grid-cols-1 gap-4 w-full">
-							<div class="bg-cover border-8 mr-2 rounded-lg shadow-xl lg:col-span-3 " style="height:450px; max-width: 700px;"> -->
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="spool.tv home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="#fff"/></svg>
+      </span>
+      spool<span class="dot-tv">.tv</span>
+    </a>
+    <div class="nav-right">
+      <nav class="nav-links" aria-label="Primary">
+        <a class="link" href="#shows">Shows</a>
+        <a class="btn btn-ghost" href="https://www.youtube.com/channel/UCvgrUqNhTaeVHhw-cmAS0gQ" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.8 12 4.8 12 4.8s-7 0-8.9.6A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.6 8.9.6 8.9.6s7 0 8.9-.6A3 3 0 0 0 23 16.5 31 31 0 0 0 23.5 12 31 31 0 0 0 23 7.5ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg>
+          Watch
+        </a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+      </button>
+    </div>
+  </header>
 
-						<div id="hero-body" class="my-4 w-full flex md:flex-row flex-col">
-							<div id="tv-video" class="bg-cover mr-4 md:w-3/4 w-full h-auto flex flex-col" style="max-width: 700px;">
-<!-- 								 <iframe width=100% height=100% src="https://www.youtube.com/embed/rP0XO51QfXo?autoplay=1&mute=1"> </iframe>  -->
-									<div class="border-8 rounded-lg shadow-xl h-96"><iframe width=100% height=100% src="https://www.youtube.com/embed/rP0XO51QfXo?autoplay=1&mute=1&controls=0&&showinfo=0&loop=1​"></iframe></div>
-									<p class="my-2 text-sm text-gray-400">TV Video format</p>
-							</div>
-							<div id="mobile-video" class="bg-cover md:w-1/4 w-full flex flex-col"style="max-width: 250px;" >
-								<div class="border-8 rounded-lg shadow-xl h-96"><iframe width=100% height=100% src="https://www.youtube.com/embed/GY5n6RI8Pv0?autoplay=1&mute=1&controls=0&&showinfo=0&loop=1​"></iframe></div>
-								<p class="my-2 text-sm text-gray-400">Mobile Vertical Video</p>
-							</div>
-						</div>
+  <main id="top">
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/brooklyn.jpg" preload="metadata" aria-hidden="true">
+      <source src="assets/brooklyn.mp4" type="video/mp4" />
+    </video>
+    <canvas id="net" aria-hidden="true"></canvas>
+    <div class="hero-scrim"></div>
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="live-pill"><span class="live-dot"></span> Live · a new edition every day</span>
+        <h1>Video feeds of<br><span class="accent">things that matter.</span></h1>
+        <p class="hero-sub">spool.tv turns the day's news into short, watchable video — curated from real sources and built for the way you actually watch: your feed, and your TV.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#shows">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg>
+            Meet the shows
+          </a>
+          <a class="btn btn-ghost" href="https://www.youtube.com/channel/UCvgrUqNhTaeVHhw-cmAS0gQ" target="_blank" rel="noopener">Watch on YouTube</a>
+        </div>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#feeds" aria-label="Scroll down">scroll<span class="bar"></span></a>
+  </section>
 
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="section-last footer" class="bg-cover" > 
-			<!-- <div id="hero-bg" class="bg-opacity-50 bg-gradient-to-t from-white via-blue-50 to-blue-300" > -->
-			<div id="footer-bg" class="bg-blue-100 bg-opacity-80 p-20" >
-				<div id="footer-content" class="container m-auto flex flex-col items-center text-black text-center ">
-					<div id="main-footer-content" class="flex flex-col items-center">
-						<div id="footer-headline" class="max-w-xl text-5xl font-thin leading-none" style="font-family:'Roboto';">
-							<a href="https://twitter.com/spool__tv"><i class="fab fa-twitter mr-2"></i></a>
-							<a href="https://www.instagram.com/spool_TV/"><i class="fab fa-instagram mr-2"></i></a>
-							<a href="https://t.me/spooltv"><i class="fab fa-telegram mr-2"></i></a>
-							<a href="mailto:feedback@automedia.ai"><i class="fas fa-envelope mr-2"></i></a>
-						</div>
-						<div id="footer-body" class="max-w-lg mt-4 text-base " >
-							<span class="">follow us for useful video feeds that keep you informed & happy. We are getting started, lots of new content on the way! For any business queries, reach out to </span> <span class="font-bold"><a href="mailto:contact@spool.tv">contact@spool.tv</a></span>
-							<!--<p class="mt-6">This service is free of charge.</p> -->
-						</div>
-						<div id="footer-end" class="max-w-lg mt-20 text-sm text-gray-400 font-light" >
-							<span class="">spool.tv is a brand of </span><span class="font-medium"><a href="http://www.automedia.ai/">automedia</a></span><span class="">, the AI printing press</span>
-							<!--<p class="mt-6">This service is free of charge.</p> -->
-						</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <!-- ============ VALUES ============ -->
+  <section class="section values" id="feeds">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">What is spool.tv</span>
+        <h2>The news, compiled into video you'll actually finish.</h2>
+        <p>We pull current events from reputable sources, then turn them into tight, characterful video feeds — the kind you watch to the end and share.</p>
+      </div>
+      <div class="value-grid reveal">
+        <div class="value">
+          <div class="vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
+          <h3>New every day</h3>
+          <p>A fresh rundown of the day's biggest stories, published daily — not a once-a-week recap.</p>
+        </div>
+        <div class="value">
+          <div class="vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+          <h3>Vertical &amp; TV</h3>
+          <p>One story, two cuts: a 9:16 mobile feed for your phone and a widescreen cut for the big screen.</p>
+        </div>
+        <div class="value">
+          <div class="vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>Real sources</h3>
+          <p>Hand-picked from reputable outlets, with a human editor on every cut. The facts stay true; the delivery is what makes it watchable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SHOWS ============ -->
+  <section class="section shows" id="shows">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">The Shows</span>
+        <h2>One network. A growing roster of feeds.</h2>
+        <p>Each show is its own character with its own beat. Here's who's on the air.</p>
+      </div>
+
+      <!-- Featured: James Newshound -->
+      <article class="feature reveal">
+        <div class="feature-body">
+          <div class="tags">
+            <span class="tag tag-new">★ New · Flagship</span>
+            <span class="tag tag-ghost">Daily news show</span>
+          </div>
+          <h3>James Newshound</h3>
+          <p class="show-tag">"He read it so you don't have to."</p>
+          <p>A spunky cartoon talking-head who chews up the day's news and spits it back out with attitude, opinions, and zero patience for boredom. The skeptic in the room — not a pundit for a side. New episodes daily.</p>
+          <div class="feature-cta">
+            <a class="btn btn-yellow" href="james.html">
+              Enter the newsroom
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <span class="chip" style="border-color:rgba(233,166,12,.5);color:var(--james-text)">TikTok · Reels · Shorts</span>
+          </div>
+        </div>
+        <div class="feature-art">
+          <span class="james-bug">LIVE</span>
+          <div class="halftone"></div>
+          <img src="assets/james_hip.png" alt="James Newshound, a bright-yellow cartoon talking-head with big eyebrows and a smirk, standing with attitude." loading="lazy" />
+        </div>
+      </article>
+
+      <!-- Secondary shows -->
+      <div class="show-grid">
+        <article class="show-card reveal">
+          <div class="kicker">Est. 2020 · Archive</div>
+          <h3>CovidFeed</h3>
+          <div class="chip-row">
+            <span class="chip">Daily</span><span class="chip">Data</span><span class="chip">TV + Vertical</span>
+          </div>
+          <p>The original spool feed — daily video updates on the pandemic, pulled from reputable statistics and news sources across regions. Where it all started.</p>
+          <a class="card-link" href="https://www.youtube.com/channel/UCvgrUqNhTaeVHhw-cmAS0gQ" target="_blank" rel="noopener">
+            Watch the archive
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="show-card soon reveal">
+          <div class="kicker">In production</div>
+          <h3>More feeds, soon</h3>
+          <div class="chip-row">
+            <span class="chip">Sports</span><span class="chip">Business</span><span class="chip">World</span>
+          </div>
+          <p>James is the first of the roster. Topic-vertical shows — each its own character and beat — are in the works. Want first dibs?</p>
+          <a class="card-link" href="https://www.youtube.com/channel/UCvgrUqNhTaeVHhw-cmAS0gQ?sub_confirmation=1" target="_blank" rel="noopener">
+            Subscribe for the next one
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section cta-band">
+    <div class="wrap">
+      <div class="cta-inner reveal">
+        <h2>Never miss a feed.</h2>
+        <p>Subscribe on YouTube and follow along. We're just getting started — a lot more is on the way.</p>
+        <a class="btn btn-dark" href="https://www.youtube.com/channel/UCvgrUqNhTaeVHhw-cmAS0gQ?sub_confirmation=1" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.8 12 4.8 12 4.8s-7 0-8.9.6A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.6 8.9.6 8.9.6s7 0 8.9-.6A3 3 0 0 0 23 16.5 31 31 0 0 0 23.5 12 31 31 0 0 0 23 7.5ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg>
+          Subscribe on YouTube
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <span class="brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="#fff"/></svg></span>spool<span class="dot-tv">.tv</span></span>
+          <p>Video feeds of things that matter. Follow us for video that keeps you informed &amp; entertained — for any business queries, reach out anytime.</p>
+        </div>
+        <div class="foot-social" aria-label="Social links">
+          <a class="soc" href="https://www.youtube.com/channel/UCvgrUqNhTaeVHhw-cmAS0gQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.8 12 4.8 12 4.8s-7 0-8.9.6A3 3 0 0 0 1 7.5 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.6 8.9.6 8.9.6s7 0 8.9-.6A3 3 0 0 0 23 16.5 31 31 0 0 0 23.5 12 31 31 0 0 0 23 7.5ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg></a>
+          <a class="soc" href="https://twitter.com/spool__tv" target="_blank" rel="noopener" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2H21l-6.6 7.5L22 22h-6.2l-4.8-6.3L5.4 22H2.6l7-8L2 2h6.3l4.4 5.8L18.2 2Zm-1.1 18h1.7L7 3.7H5.2L17.1 20Z"/></svg></a>
+          <a class="soc" href="https://www.instagram.com/spool_TV/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="soc" href="https://t.me/spooltv" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.5 13.4l-4.8-1.5c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.3 1.1Z"/></svg></a>
+          <a class="soc" href="mailto:contact@spool.tv" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 spool.tv</span>
+        <span class="disclosure">Animated / AI-assisted productions</span>
+        <span>a brand of <a href="https://www.automedia.ai/" target="_blank" rel="noopener">automedia</a> · <a href="mailto:contact@spool.tv">contact@spool.tv</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/net.js" defer></script>
+  <script>
+    // nav scrolled state
+    var nav = document.getElementById('nav');
+    var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 24); };
+    onScroll(); addEventListener('scroll', onScroll, { passive: true });
+
+    // theme toggle (light default; respects manual choice over OS)
+    (function () {
+      var root = document.documentElement, btn = document.getElementById('theme-toggle');
+      var mql = window.matchMedia('(prefers-color-scheme: dark)');
+      function reflect(t) { var d = t === 'dark'; btn.setAttribute('aria-pressed', String(d)); btn.setAttribute('aria-label', d ? 'Switch to light theme' : 'Switch to dark theme'); }
+      reflect(root.getAttribute('data-theme') || 'light');
+      btn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        reflect(next);
+      });
+      mql.addEventListener('change', function (e) {
+        try { if (localStorage.getItem('theme')) return; } catch (_) {}
+        var sys = e.matches ? 'dark' : 'light'; root.setAttribute('data-theme', sys); reflect(sys);
+      });
+    })();
+
+    // scroll reveal
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  </script>
+
+  <!-- ============ Cloudflare Web Analytics (cookieless) ============
+       spool.tv points straight at GitHub Pages (not proxied through Cloudflare),
+       so add this beacon to track it: Cloudflare dashboard → Analytics & Logs →
+       Web Analytics → Add a site (spool.tv) → copy the token, paste it in place
+       of the placeholder below, then UNCOMMENT the <script> tag to activate.
+       (Or flip spool.tv to Cloudflare's orange cloud for automatic edge analytics.)
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "REPLACE_WITH_YOUR_CLOUDFLARE_WEB_ANALYTICS_TOKEN"}'></script>
+  -->
+
 </body>
 </html>
